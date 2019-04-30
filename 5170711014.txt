@@ -1,0 +1,81 @@
+#include <iostream>
+#include<conio.h>
+#include<cstring>
+#include<string>
+using namespace::std;
+
+struct semua{
+        string nama ;
+        char kode[20];
+        int harga,rak ;
+}; semua saja[50];
+int jumlah,tmp,z;
+
+void input(){
+cout<<"masukan jumlah barang\t";
+    cin>>jumlah;
+    cout<<endl;
+    for(int x=0;x<jumlah;x++){
+cout<<"barang ke\t"<<x;
+cout<<endl;
+    cout<<"input kode\t";cin>>saja[z].kode;
+    cout<<"input nama\t";cin>>saja[z].nama;
+    cout<<"input harga Rp.\t";cin>> saja[z].harga;
+    cout<<"input nomer rak\t";cin>>saja[z].rak;
+    cout<<endl;}}
+
+
+void lihat(){
+int d,k;
+k=0;
+for(d=0;d<z;d++){
+k=k+1;
+cout<<k;
+cout<<saja[d].kode;
+cout<<saja[d].nama;
+cout<<saja[d].harga;
+cout<<saja[d].rak;
+}}
+
+
+
+void hapus()
+{int x,y;
+ cout<<"hapus data :";cin>>x;
+ y=x-1;
+ z--;
+ for(int d=y;d<z;d++)
+ {saja[d]=saja[d+1];}
+lihat();
+}
+void ganti(){
+int w,m;
+cout<<"input data yang akan diubah";cin>>w;
+w=m-1;
+cout<<"input kode\t";cin>>saja[w].kode;
+cout<<"input nama\t";cin>>saja[w].nama;
+cout<<"input harga Rp.\t";cin>> saja[w].harga;
+cout<<"input nomer rak\t";cin>>saja[w].rak;
+lihat();
+}
+
+int main(){
+int m;
+input();
+awal:
+cout<<"\npilihan";
+cout<<endl;
+cout<<"\n1\ttampilkan data";
+cout<<"\n2\thapus data";
+cout<<"\n3\tubah data";
+cout<<endl;
+cout<<"piilih menu";cin>>m;
+if(m==1){
+lihat(); goto awal;}
+else if(m==2){
+hapus(); goto awal;}
+else if(m==3){
+ganti(); goto awal;
+}
+}
+ 
